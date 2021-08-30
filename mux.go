@@ -4,11 +4,11 @@ import "net/http"
 
 // Mux route http request
 type Mux struct {
-	http.ServeMux
+	*http.ServeMux
 }
 
 // New HTTP Servermux
-func New(m http.ServeMux) *Mux {
+func New(m *http.ServeMux) *Mux {
 	return &Mux{m}
 }
 
