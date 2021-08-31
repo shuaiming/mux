@@ -14,7 +14,7 @@ func New(m *http.ServeMux) *Mux {
 
 // ServeHTTP implement pod.Handler
 func (m *Mux) ServeHTTP(
-	rw http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
-	m.ServeMux.ServeHTTP(rw, r)
-	next(rw, r)
+	w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
+	m.ServeMux.ServeHTTP(w, r)
+	next(w, r)
 }
